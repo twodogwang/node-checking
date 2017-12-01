@@ -1,0 +1,96 @@
+[2017-11-30 10:29:24.981] [INFO] default - 2017年11月30日 10:27:58:undefined登录了
+[2017-11-30 10:36:30.847] [INFO] default - 2017年11月30日 10:36:22:undefined登录了
+[2017-11-30 10:38:36.393] [INFO] default - 2017年11月30日 10:38:27:undefined登录了
+[2017-11-30 10:39:13.945] [INFO] default - 2017年11月30日 10:39:10:undefined登录了
+[2017-11-30 10:39:33.425] [INFO] default - 2017年11月30日 10:39:26:undefined登录了
+[2017-11-30 10:40:06.821] [INFO] default - 2017年11月30日 10:39:53:undefined登录了
+[2017-11-30 10:41:10.591] [INFO] default - 2017年11月30日 10:39:53:undefined登录了
+[2017-11-30 10:42:05.000] [INFO] default - 2017年11月30日 10:41:57:undefined登录了
+[2017-11-30 10:42:41.054] [INFO] default - 2017年11月30日 10:41:57:undefined登录了
+[2017-11-30 10:51:06.049] [INFO] default - 2017年11月30日 10:50:53:undefined登录了
+[2017-11-30 10:52:38.547] [INFO] default - 2017年11月30日 10:52:32:undefined登录了
+[2017-11-30 10:53:37.277] [INFO] default - 2017年11月30日 10:53:32:undefined登录了
+[2017-11-30 10:53:57.020] [INFO] default - 2017年11月30日 10:53:32:undefined登录了
+[2017-11-30 10:54:10.081] [INFO] default - 2017年11月30日 10:53:32:undefined登录了
+[2017-11-30 10:54:54.171] [INFO] default - 2017年11月30日 10:53:32:undefined登录了
+[2017-11-30 10:55:15.539] [INFO] default - 2017年11月30日 10:53:32:undefined登录了
+[2017-11-30 10:56:21.766] [INFO] default - 2017年11月30日 10:56:16:undefined登录了
+[2017-11-30 10:57:09.303] [INFO] default - 2017年11月30日 10:56:16:undefined登录了
+[2017-11-30 10:58:37.095] [INFO] default - 2017年11月30日 10:58:31:undefined登录了
+[2017-11-30 14:49:34.573] [ERROR] default - TypeError: Cannot read property 'length' of undefined
+    at Query._callback (C:\Users\Administrator\Desktop\work\ppxt\checkin\controllers\login\login.js:27:25)
+    at Query.Sequence.end (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Sequence.js:86:24)
+    at Query.ErrorPacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Query.js:88:8)
+    at Protocol._parsePacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+[2017-11-30 14:50:25.232] [ERROR] default - TypeError: Cannot read property 'length' of undefined
+    at Query._callback (C:\Users\Administrator\Desktop\work\ppxt\checkin\controllers\login\login.js:28:25)
+    at Query.Sequence.end (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Sequence.js:86:24)
+    at Query.ErrorPacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Query.js:88:8)
+    at Protocol._parsePacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+[2017-11-30 14:50:56.044] [ERROR] default - { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+    at PoolConnection.query (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\Users\Administrator\Desktop\work\ppxt\checkin\module\sqlpool.js:19:18
+    at Ping.onOperationComplete [as _callback] (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.Sequence.end (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Sequence.js:86:24)
+    at Ping.Sequence.OkPacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Sequence.js:95:8)
+    at Protocol._parsePacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlState: '42S22',
+  index: 0 }
+[2017-11-30 14:51:12.730] [ERROR] default - { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+    at PoolConnection.query (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\Users\Administrator\Desktop\work\ppxt\checkin\module\sqlpool.js:19:18
+    at Ping.onOperationComplete [as _callback] (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.Sequence.end (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Sequence.js:86:24)
+    at Ping.Sequence.OkPacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\sequences\Sequence.js:95:8)
+    at Protocol._parsePacket (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\Users\Administrator\Desktop\work\node_modules\mysql\lib\Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlState: '42S22',
+  index: 0 }
+[2017-11-30 14:56:22.235] [INFO] default - 2017年11月30日 14:56:18:undefined登录了
+[2017-11-30 16:50:33.825] [INFO] default - 2017年11月30日 16:50:13:undefined登录了
+[2017-11-30 18:27:51.609] [INFO] default - 2017年11月30日 18:10:27:undefined登录了
