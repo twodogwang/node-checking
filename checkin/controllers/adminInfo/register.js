@@ -1,11 +1,10 @@
-const express = require("express");
-const router = express.Router();
+
+
 const query = require("../../module/sqlpool.js");
 const secret = require("../../module/token.js").secret;
 const token = require("../../module/token.js").token;
 
-
-router.post("/user/register",(req,res)=>{
+exports.register = function(req,res){
     console.log("register")
     let u_username = req.body.u_username
     let beforregister = new Promise((reslove,reject)=>{
@@ -26,12 +25,13 @@ router.post("/user/register",(req,res)=>{
             let email = req.body.email
             let u_bz = req.body.u_bz
             let superior = req.body.superior
-            let sql = `INSERT INTO user (u_username,u_password,tel,email,u_bz,superior) VALUES ("${u_username}","${u_password}","${tel}","${email}","${u_bz}",${superior})`
+            let permissionLevel = req.body.permissionLevel
+            let sql = `INSERT INTO user (u_username,u_password,tel,email,u_bz,superior,permissionLevel) VALUES ("${u_username}","${u_password}","${tel}","${email}","${u_bz}",${superior},${permissionLevel})`
             query(sql,(err,results,fields)=>{
                 if(err) console.error(err)
                 let role_id = req.body.role_id
-                let sql = `INSERT INTO user_role (u_id,role_id) VALUES (${results.insertId},${role_id})`
-                query(sql,(err,results,fields)=>{
+                let sql2 = `INSERT INTO user_role (u_id,role_id) VALUES (${results.insertId},${role_id})`
+                query(sql2,(err,results,fields)=>{
                     if(err) console.error(err)
                     res.send({'code':20000,'msg':"添加成功"});
                 })
@@ -41,7 +41,5 @@ router.post("/user/register",(req,res)=>{
             res.send({'code':10000,'msg':"该用户已存在"});
         }
     })
-})
-
-
-module.exports = router;
+}
+// router.post("/user/register",(req,res)=>{})

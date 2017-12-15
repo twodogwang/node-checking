@@ -1,0 +1,1 @@
+[2017-12-05T13:43:49.630] [INFO] default - 新增客户sql: INSERT INTO customer (c_name,c_lx,c_number,c_tel,c_sex,c_hj,c_age,c_bz,lr_renyuan,c_mean,m_addtime) values ("lxx",1,"320","320",0,"河北省,唐山市,古冶区",15,"123456","126","意向客户",NOW()) 

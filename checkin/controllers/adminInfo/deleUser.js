@@ -1,11 +1,10 @@
-const express = require("express");
-const router = express.Router();
+
+
 const query = require("../../module/sqlpool.js");
 const secret = require("../../module/token.js").secret;
 const token = require("../../module/token.js").token;
 
-
-router.post("/user/deleUser",(req,res)=>{
+exports.deleUser = function(req,res){
     console.log("deleUser")
     let u_id = req.body.u_id
     let deleteUser = new Promise((resolve,reject)=>{
@@ -29,8 +28,5 @@ router.post("/user/deleUser",(req,res)=>{
             res.send({'code':10000,'msg':"删除失败请联系管理员"})
         }
     })
-    
-})
-
-
-module.exports = router;
+}
+// router.post("/user/deleUser",(req,res)=>{})

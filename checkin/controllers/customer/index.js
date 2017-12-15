@@ -1,0 +1,20 @@
+module.exports = {
+    addCustomer:require("./addCustomer").addCustomer,
+    serchCustomer:require("./serchCustomer").serch,
+    changeInfo:require("./changeInfo").changeInfo,
+    changeWorkInfo:require("./changeWorkInfo").changeWorkinfo,
+    changeFarenInfo:require("./changeFarenInfo").changeFarenInfo,
+    changeAssetInfo:require("./changeAssetInfo").changeAssetInfo,
+    intentionCustomer:require("./intentionCustomer").intentionCustomer,
+    waitForTransform:require("./waitForTransform").waitForTransform,
+    alreadyTransform:require("./alreadyTransform").alreadyTransform,
+    addOrder:require("./addOrder").addOrder,
+    sendCustomer:require("./sendCustomer").sendCustomer,
+    customerOut:require("./customerOut").customerOut,
+    transformCustomer:require("./transformCustomer").transformCustomer,
+    getOrder:require("./getOrder").getOrder,
+    checkLog:require("./checkLog").checkLog,
+    searchCustomerList:require("./searchCustomerList").searchCustomerList,
+    searchCustomerById:require("./searchCustomerById").searchCustomerById,
+    highseasCustomer:require("./highseasCustomer").highseasCustomer
+}

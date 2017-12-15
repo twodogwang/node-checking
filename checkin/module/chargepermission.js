@@ -22,8 +22,8 @@ function permission(req,res,token) {
                     })
                 }else{
                     let permissionUrl = tokendata.payload.data.url
-                    console.log("permissionUrl",permissionUrl)
-                    let handleUrl = req.originalUrl;
+                    let handleUrl = req._parsedUrl.pathname
+                    console.log("handleUrl",handleUrl)
                     if(permissionUrl.indexOf(handleUrl) > -1){
                         resolve({'code':20000})
                     }else{

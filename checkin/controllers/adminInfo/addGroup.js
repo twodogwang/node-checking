@@ -1,13 +1,12 @@
-const express = require("express");
-const router = express.Router();
+
+
 const query = require("../../module/sqlpool.js");
 const log = require("../log").log;
 const log1 = require("../log").log1;
 const secret = require("../../module/token.js").secret;
 const token = require("../../module/token.js").token;
 
-
-router.post("/group/addGroup",(req,res)=>{
+exports.addGroup = function(req,res){
     console.log("addGroup")
     let gropuname = req.body.role_name
     let beforAdd = new Promise((reslove,reject)=>{
@@ -36,7 +35,5 @@ router.post("/group/addGroup",(req,res)=>{
             res.send({'code':10000,'msg':"该分组已存在"});
         }
     })
-})
-
-
-module.exports = router;
+}
+// router.post("/group/addGroup",(req,res)=>{})

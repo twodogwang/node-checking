@@ -1,9 +1,9 @@
-const express = require("express");
-const router = express.Router();
+
+
 const query = require("../../module/sqlpool.js");
 const token = require("../../module/token.js").token;
 
-router.get("/group/getGroupInfo",(req,res)=>{
+exports.getGroupInfo = function(req,res){
     console.log("getGroupInfo")
     const pageInfo = JSON.parse(req.query.pageInfo)
     let sellecttotal = new Promise((resolve,reject)=>{
@@ -35,7 +35,5 @@ router.get("/group/getGroupInfo",(req,res)=>{
             });
         })
     })
-})
-
-
-module.exports = router;
+}
+// router.get("/group/getGroupInfo",(req,res)=>{})

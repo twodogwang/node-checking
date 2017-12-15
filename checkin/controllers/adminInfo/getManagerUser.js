@@ -1,39 +1,29 @@
-const express = require("express");
-const router = express.Router();
 const query = require("../../module/sqlpool.js");
-const log = require("../log").log;
-const log1 = require("../log").log1;
-const secret = require("../../module/token.js").secret;
-const token = require("../../module/token.js").token;
-
-router.get("/user/getManagerUser",(req,res)=>{
-    console.log("getManagerUser")
-    let role_id = req.query.role_id
-    switch (Number(role_id)) {
-        case 5:
-            var sql2 = `WHERE ur.role_id = 4`
-            break;
-        case 6:
-            var sql2 = `WHERE ur.role_id = 3`
-            break;
-        default:
-            var sql2 = `WHERE ur.role_id = 1`
-            break;
-    }
-    let sql = `SELECT
+exports.getManagerUser = function (req, res) {
+  console.log("getManagerUser")
+  let permissionLevel = req.query.permissionLevel
+  switch (Number(permissionLevel)) {
+    case 4:
+      var sql2 = `WHERE u.permissionLevel = 3`
+      break;
+    case 7:
+      var sql2 = `WHERE u.permissionLevel = 6`
+      break;
+    default:
+      var sql2 = `WHERE u.permissionLevel = 1`
+      break;
+  }
+  let sql = `SELECT
     u.u_username,
-    u.u_id,
-    ur.role_id
+    u.u_id
     FROM
-    user u
-    INNER JOIN user_role ur ON u.u_id = ur.u_id `
-    sql += sql2;
-    console.log(sql)
-    query(sql,(err,results,fields)=>{
-        if(err) console.error(err)
-        res.send({'code':20000,'data':results});
-    })
-})
+    user u `
+  sql += sql2;
+  console.log(sql)
+  query(sql, (err, results, fields) => {
+    if (err) console.error(err)
+    res.send({ 'code': 20000, 'msg': "获取成功", 'data': results });
+  })
+}
+// router.get("/user/getManagerUser",(req,res)=>{})
 
-
-module.exports = router;

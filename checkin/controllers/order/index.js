@@ -1,0 +1,20 @@
+module.exports = {
+    getAllorder:require("./getAllorder").getAllorder,
+    waitForAccept:require("./waitForAccept").waitForAccept,
+    checkin:require("./checkin").checkin,
+    transformOrder:require("./transformOrder").transformOrder,
+    changeProType:require("./changeProType").changeProType,
+    changeChannel:require("./changeChannel").changeChannel,
+    writeLog:require("./writeLog").writeLog,
+    checkBz:require("./checkBz").checkBz,
+    checkLog:require("./checkLog").checkLog,
+    getPayforOrder:require("./getPayforOrder").getPayforOrder,
+    affirmOrder:require("./affirmOrder").affirmOrder,
+    searchOrderList:require("./searchOrderList").searchOrderList,
+    searchPayforOrderList:require("./searchPayforOrderList").searchPayforOrderList,
+    getDeferOrder:require("./getDeferOrder").getDeferOrder,
+    getChargebackOrder:require("./getChargebackOrder").getChargebackOrder,
+    getApprovalOrder:require("./getApprovalOrder").getApprovalOrder,
+    getCustomerTel:require("./getCustomerTel").getCustomerTel,
+    getCompleteOrder:require("./getCompleteOrder").getCompleteOrder
+}

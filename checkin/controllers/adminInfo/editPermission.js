@@ -1,8 +1,7 @@
-const express = require("express");
-const router = express.Router();
-const query = require("../../module/sqlpool.js");
 
-router.post("/permission/editPermission",(req,res)=>{
+
+const query = require("../../module/sqlpool.js");
+exports.editPermission = function(req,res){
     console.log("editPermission")
     let url = req.body.url
     let pDesc = req.body.pDesc
@@ -16,7 +15,6 @@ router.post("/permission/editPermission",(req,res)=>{
         if(err) return console.error(err)
         res.send({'code':20000,'msg':"权限添加成功"})
     })
-})
+}
+// router.post("/permission/editPermission",(req,res)=>{})
 
-
-module.exports = router;

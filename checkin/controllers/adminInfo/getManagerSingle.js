@@ -1,10 +1,8 @@
-const express = require("express");
-const router = express.Router();
+
+
 const query = require("../../module/sqlpool.js");
 
-const token = require("../../module/token.js").token;
-
-router.get("/user/getManagerSingle",(req,res)=>{
+exports.getManagerSingle = function(req,res){
     console.log("getManagerSingle")
     /* let sql = `SELECT 
     u_username,
@@ -28,9 +26,7 @@ router.get("/user/getManagerSingle",(req,res)=>{
     console.log(sql)
     query(sql,(err,results,fields)=>{
         if(err) console.error(err)
-        res.send({'code':20000,formdata:results[0]});
+        res.send({'code':20000,'msg':"获取成功",formdata:results[0]});
     })
-})
-
-
-module.exports = router;
+}
+// router.get("/user/getManagerSingle",(req,res)=>{})
